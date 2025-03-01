@@ -19,7 +19,7 @@ Get the latest update info if a new update exists\
 \
 **RequestUpdateInfo** takes a callback which gets triggered when new update info is fetched. The callback will be triggered with AppUpdaterUpdateInfo instance where you can fetch the AppUpdaterUpdateStatus.
 
-> Note that the callback will have update status as  Available only if an update exists and user hasn't updated yet.
+> Note that the callback will have update status as Available only if an update exists and user hasn't updated yet.
 
 ```
 AppUpdater.RequestUpdateInfo((AppUpdaterUpdateInfo result, Error error) => 
@@ -45,7 +45,7 @@ For calling PromptUpdate, you need to pass PromptUpdateOptions instance.
 #### Create PromptUpdateOptions
 
 ```csharp
-PromptUpdateOptions.Builder optionsBuilder = new PromptUpdateOptions.Builder().
+PromptUpdateOptions.Builder optionsBuilder = new PromptUpdateOptions.Builder();
 optionsBuilder.SetPromptTitle("Update available");
 optionsBuilder.SetPromptMessage("A new version of this app is available.");
 optionsBuilder.SetIsForceUpdate(isForceUpdate: false); //Passing true will not let user to dismiss this prompt.
